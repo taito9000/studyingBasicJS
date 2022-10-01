@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+
+    // function fullName(family_name,first_name){
+    //         alert(family_name+first_name);
+    // };
+
+    // const family_name = document.getElementsByName("familyName");
+
+    // const first_name = document.getElementsByName("firstName");
+
+/*
+
+固定文字をアラートするだけでは簡単なので、
+フォーム部品に入力された情報を取得して、それを表示させてみましょう。
+
+条件は、
+　・今回もjQuery不使用で作成します。
+　・script タグを上部に設置したままで動作させる
+仕様：姓と名を入力し、ボタンをクリックするとフルネームがアラート表示される。
+
+*/
+    
+
+      
+    // const submit = document.getElementsByTagName("button");
+    
+    // const family_name = document.getElementsByName("familyName");
+
+    // const first_name = document.getElementsByName("firstName");
+
+    // function outputFullName(family_name,first_name){
+    //   alert(family_name+first_name);
+    // };
+      
+    document.addEventListener('DOMContentLoaded', function() {
+      (submit[0]).addEventListener('click', function(){
+        
+    const submit = document.getElementsByTagName("button");
+    
+    const family_name = document.getElementsByName("familyName");
+
+    const first_name = document.getElementsByName("firstName");
+
+    function outputFullName(family_name,first_name){
+      alert(family_name+first_name);
+    };
+        outputFullName(family_name[0].value,first_name[0].value);
+      });
+    });
+
+
+
+    // document.addEventListener('DOMContentLoaded', function() {
+    //   submit.addEventListener('click', {family_name:family_name,first_name:first_name , handlevent:fullName
+    //   });
+    // });
+    
+  </script>
+</head>
+<body>
+
+  姓：<input type="text" name="familyName" /><br />
+  名：<input type="text" name="firstName" /><br />
+  
+  <button>フルネームを表示</button>
+
+</body>
+
+</html>

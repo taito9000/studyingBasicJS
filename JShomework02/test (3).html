@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ 
+</head>
+<body>
+
+  <button id="btn1">function宣言の関数</button>
+
+  <button id="btn2">アロー関数</button>
+<script>
+    /*
+     * HTMLに作成されている2つのボタンが押された際に
+     * 以下のとおり動作するようプログラミングしてください。
+     * 
+     * btn1 が押された場合
+     * 「おはよう」とアラート表示する
+     * ただし、関数は function 宣言で作る
+     * btﾝ2 が押された場合
+     * 「こんにちは」とアラート表示する
+     * ただし、関数はアロー関数として作る
+     */
+
+
+    const b = "こんにちは"; 
+    
+    function GoodMornig(){
+      alert("おはよう");
+    };
+
+    const GoodAfterNoon = str => alert(str);
+    
+    $(function(){
+      $("#btn1").on('click',function(){
+        GoodMornig();
+      });
+      $("#btn2").on('click',(()=>{
+        GoodAfterNoon(b);
+      }));
+    });
+
+  </script>
+</body>
+
+</html>

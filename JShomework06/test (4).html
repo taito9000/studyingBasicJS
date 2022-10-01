@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    let submit = document.querySelector("button");
+    
+    let family_name = document.querySelector("input[name='familyName']");
+    
+    let first_name = document.querySelector("input[name='firstName']");
+
+    let gender = document.querySelector("label");
+
+    let hobby = document.querySelector("input[name='firstName']");
+    
+    function outputFullName(family_name,first_name){
+      alert(family_name+first_name);
+    };
+    
+    submit.addEventListener('click', function(){
+      outputFullName(family_name.value,first_name.value);
+    });
+  });
+  </script>
+</head>
+<body>
+
+<!--   
+  姓：<input type="text" name="familyName" /><br />
+  名：<input type="text" name="firstName" /><br />
+  性別：ここにラジオボタンで女性と男性を選択できるように作成
+  趣味：ここにチェックボックスで複数選択可能な趣味を作成（3つ以上 
+<button>入力内容を表示</button>
+  ボタンをクリックすると、入力内容が項目ごとに改行されてアラートされるよう作成
+-->
+  
+
+
+  姓：
+  <input type="text" name="familyName" /><br />
+  名：
+  <input type="text" name="firstName" /><br />
+  性別：
+  <label><input type = "radio" name="gender" value="male">男性</label>
+  <label><input type = "radio" name="gender" value="female">女性</label>
+  趣味：
+  <input type="checkbox" name=“hobby1” value="1">スポーツ観戦・運動
+  <input type="checkbox" name=“hobby2” value="2">映画・ドラマ鑑賞
+  <input type="checkbox" name=“hobby3” value="3">漫画・アニメ鑑賞
+  <input type="checkbox" name=“hobby4” value="4">旅行
+  <input type="checkbox" name=“hobby5” value="5">ゲーム
+  <input type="checkbox" name=“hobby6” value="6">爬虫類・奇蟲飼育
+  
+  <button>入力内容を表示</button>
+  
+
+
+
+</body>
+
+</html>

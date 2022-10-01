@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+/*
+
+固定文字をアラートするだけでは簡単なので、
+フォーム部品に入力された情報を取得して、それを表示させてみましょう。
+
+条件は、
+　・今回もjQuery不使用で作成します。
+　・script タグを上部に設置したままで動作させる
+仕様：姓と名を入力し、ボタンをクリックするとフルネームがアラート表示される。
+
+上記に加え、今回querySelectorを使用して行う。
+
+*/
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        let submit = document.querySelector("button");
+        
+        let family_name = document.querySelector("input[name='familyName']");
+
+        let first_name = document.querySelector("input[name='firstName']");
+
+        function outputFullName(family_name,first_name){
+            alert(family_name+first_name);
+        };
+
+        submit.addEventListener('click', function(){
+            outputFullName(family_name.value,first_name.value);
+        });
+    });
+
+  </script>
+</head>
+<body>
+
+  姓：<input type="text" name="familyName" /><br />
+  名：<input type="text" name="firstName" /><br />
+  
+  <button>フルネームを表示</button>
+
+</body>
+
+</html>

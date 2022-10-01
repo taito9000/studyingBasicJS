@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+  <title>Document</title>
+  <button id="btn1">function宣言の関数</button>
+
+  <button id="btn2">アロー関数</button>
+  
+  <script>
+
+    const b = "こんにちは"; 
+    
+    function goodMorning(){
+      alert("おはよう");
+    };
+
+    const goodAfternoon = str => alert(str);
+
+    const btn1 = document.getElementById("btn1");
+
+    const btn2 = document.getElementById("btn2");
+
+    document.addEventListener('DOMContentLoaded', function() {
+        btn1.addEventListener('click', function(){
+            goodMorning();
+        });
+        btn2.addEventListener('click', function(){
+            goodAfternoon(b);
+        });
+    });
+
+    
+/*
+    HTMLに作成されている2つのボタンが押された際に
+    以下のとおり動作するようプログラミングしてください。
+
+    btn1 が押された場合
+    「おはよう」とアラート表示する
+    ただし、関数は function 宣言で作る
+    btﾝ2 が押された場合
+    「こんにちは」とアラート表示する
+    ただし、関数はアロー関数として作る
+
+    $(function(){
+      $("#btn1").on('click',function(){
+        GoodMornig();
+      });
+      $("#btn2").on('click',(()=>{
+        GoodAfterNoon(b);
+      }));
+    });
+
+    上記をvanilaで書き換える。
+*/
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
